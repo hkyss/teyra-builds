@@ -1,0 +1,257 @@
+{
+  "format": 16,
+  "id": "fallout-nv",
+  "title": "Foundation Build",
+  "version": "1.0.0",
+  "authors": [{ "name": "hkyss" }],
+  "license": "GPL-3.0",
+  "description": {
+    "en": "New Vegas ready for your own mods. Engine fixes keep it running on modern systems, the unofficial patches repair what Obsidian had no time to finish, and GECK is set up if you want to make something yourself.",
+    "ru": "New Vegas, готовый к вашим модам. Исправления движка держат игру на современных системах, неофициальные патчи чинят то, что Obsidian не успела доделать, а GECK настроен, если захочется сделать что-то своё."
+  },
+  "category": "advanced",
+  "gameId": "fallout-nv",
+  "folder": "Foundation Build",
+  "options": [
+    { "id": "language", "kind": "language", "values": ["english", "french", "german", "italian", "spanish"], "default": "english", "followsStore": true },
+    { "id": "profile", "kind": "profile", "labels": { "Base": { "ru": "Основной" }, "Test": { "ru": "Тестовый" } } }
+  ],
+  "art": {
+    "monogram": "FNV",
+    "tile": "linear-gradient(140deg, #b8864a 0%, #4a2f1a 100%)",
+    "glow": ["#e0a35a", "#d46a3c", "#f2d27a"]
+  },
+  "mods": [
+    {
+      "name": "New Vegas Script Extender",
+      "nexusId": 67883,
+      "file": "New Vegas Script Extender (xNVSE)",
+      "target": "game",
+      "expect": ["NVSE/nvse_config.ini"],
+      "expectGame": ["nvse_loader.exe", "nvse_1_4.dll"]
+    },
+    {
+      "name": "FNV 4GB Patcher",
+      "nexusId": 62552,
+      "file": "4GB Patcher",
+      "target": "game",
+      "expectGame": ["FNVpatch.exe"]
+    },
+    {
+      "name": "JIP LN NVSE Plugin",
+      "nexusId": 58277,
+      "file": "JIP LN NVSE Plugin",
+      "expect": ["NVSE/Plugins/jip_nvse.dll"]
+    },
+    {
+      "name": "JohnnyGuitar NVSE",
+      "nexusId": 66927,
+      "file": "JohnnyGuitar NVSE",
+      "expect": ["NVSE/Plugins/johnnyguitar.dll"]
+    },
+    {
+      "name": "ShowOff xNVSE",
+      "nexusId": 72541,
+      "file": "ShowOff xNVSE",
+      "expect": ["NVSE/Plugins/ShowOffNVSE.dll"]
+    },
+    {
+      "name": "ShowOff INI",
+      "nexusId": 72541,
+      "file": "ShowOff INI",
+      "expect": ["NVSE/Plugins/ShowOffNVSE.ini"]
+    },
+    {
+      "name": "kNVSE Animation Plugin",
+      "nexusId": 71336,
+      "file": "kNVSE",
+      "expect": ["NVSE/Plugins/kNVSE.dll"]
+    },
+    {
+      "name": "AnhNVSE",
+      "nexusId": 74012,
+      "file": "AnhNVSE v1.3.1",
+      "expect": ["NVSE/Plugins/AnhNVSE.dll"]
+    },
+    {
+      "name": "lStewieAl's Tweaks and Engine Fixes",
+      "nexusId": 66347,
+      "file": "Stewie Tweaks",
+      "expect": ["NVSE/Plugins/nvse_stewie_tweaks.dll"]
+    },
+    {
+      "name": "Stewie Tweaks INI",
+      "nexusId": 66347,
+      "file": "Stewie Tweaks INI",
+      "expect": ["NVSE/Plugins/nvse_stewie_tweaks.ini"]
+    },
+    {
+      "name": "lStewieAl's Engine Optimizations",
+      "nexusId": 80993,
+      "file": "Engine Optimizations",
+      "expect": ["NVSE/Plugins/EngineOptimizations.dll"]
+    },
+    {
+      "name": "NVTF - New Vegas Tick Fix",
+      "nexusId": 66537,
+      "file": "NVTF",
+      "expect": ["NVSE/Plugins/NVTF.dll"]
+    },
+    {
+      "name": "NVTF - INI",
+      "nexusId": 66537,
+      "file": "NVTF - INI",
+      "expect": ["NVSE/Plugins/NVTF.ini"]
+    },
+    {
+      "name": "FNV Mod Limit Fix",
+      "nexusId": 68714,
+      "file": "MLF",
+      "expect": ["NVSE/Plugins/mlf.dll"]
+    },
+    {
+      "name": "ActorCause Save Bloat Fix",
+      "nexusId": 80666,
+      "file": "ActorCause Save Bloat Fix",
+      "expect": ["NVSE/Plugins/ActorCauseSaveBloatFix.dll"]
+    },
+    {
+      "name": "Crash Logger",
+      "nexusId": 82540,
+      "file": "Crash Logger",
+      "expect": ["NVSE/Plugins/CrashLogger.dll"]
+    },
+    {
+      "name": "UIO - User Interface Organizer",
+      "nexusId": 57174,
+      "file": "UIO - User Interface Organizer",
+      "expect": ["NVSE/Plugins/ui_organizer.dll"]
+    },
+    {
+      "name": "Improved Console",
+      "nexusId": 70801,
+      "file": "Improved Console",
+      "expect": ["NVSE/Plugins/improved_console.dll"]
+    },
+    {
+      "name": "GECK Extender",
+      "nexusId": 64888,
+      "file": "Geck Extender",
+      "expect": ["NVSE/Plugins/ZeGaryHax.dll"]
+    },
+    {
+      "name": "GECK Extender - GECK",
+      "nexusId": 64888,
+      "file": "Geck",
+      "target": "game",
+      "expectGame": ["GECK.exe"]
+    },
+    {
+      "name": "GECK Extender - Config",
+      "nexusId": 64888,
+      "file": "GECK Extender - Config",
+      "expect": ["NVSE/Plugins/geckextender.ini"]
+    },
+    {
+      "name": "Unofficial Patch NVSE Plus",
+      "nexusId": 71239,
+      "file": "Unofficial Patch NVSE Plus",
+      "expect": ["Unofficial Patch NVSE Plus.esp"]
+    },
+    {
+      "name": "Yukichigai Unofficial Patch",
+      "nexusId": 51664,
+      "file": "YUP - Base Game and All DLC",
+      "expect": ["YUP - Base Game + All DLC.esm"]
+    }
+  ],
+  "patches": [
+    { "name": "4GB patch", "program": "FNVpatch.exe", "done": ["FalloutNV_backup.exe"] }
+  ],
+  "profiles": [
+    {
+      "name": "Base",
+      "mods": [
+        "New Vegas Script Extender",
+        "FNV 4GB Patcher",
+        "JIP LN NVSE Plugin",
+        "JohnnyGuitar NVSE",
+        "ShowOff xNVSE",
+        "ShowOff INI",
+        "kNVSE Animation Plugin",
+        "AnhNVSE",
+        "lStewieAl's Tweaks and Engine Fixes",
+        "Stewie Tweaks INI",
+        "lStewieAl's Engine Optimizations",
+        "NVTF - New Vegas Tick Fix",
+        "NVTF - INI",
+        "FNV Mod Limit Fix",
+        "ActorCause Save Bloat Fix",
+        "Crash Logger",
+        "UIO - User Interface Organizer",
+        "Improved Console",
+        "GECK Extender",
+        "GECK Extender - GECK",
+        "GECK Extender - Config",
+        "Unofficial Patch NVSE Plus",
+        "Yukichigai Unofficial Patch"
+      ],
+      "plugins": [
+        "FalloutNV.esm",
+        "DeadMoney.esm",
+        "HonestHearts.esm",
+        "OldWorldBlues.esm",
+        "LonesomeRoad.esm",
+        "GunRunnersArsenal.esm",
+        "ClassicPack.esm",
+        "MercenaryPack.esm",
+        "TribalPack.esm",
+        "CaravanPack.esm",
+        "YUP - Base Game + All DLC.esm",
+        "Unofficial Patch NVSE Plus.esp"
+      ]
+    },
+    {
+      "name": "Test",
+      "mods": [
+        "New Vegas Script Extender",
+        "FNV 4GB Patcher",
+        "JIP LN NVSE Plugin",
+        "JohnnyGuitar NVSE",
+        "ShowOff xNVSE",
+        "ShowOff INI",
+        "kNVSE Animation Plugin",
+        "AnhNVSE",
+        "lStewieAl's Tweaks and Engine Fixes",
+        "Stewie Tweaks INI",
+        "lStewieAl's Engine Optimizations",
+        "NVTF - New Vegas Tick Fix",
+        "NVTF - INI",
+        "FNV Mod Limit Fix",
+        "ActorCause Save Bloat Fix",
+        "Crash Logger",
+        "UIO - User Interface Organizer",
+        "Improved Console",
+        "GECK Extender",
+        "GECK Extender - GECK",
+        "GECK Extender - Config",
+        "Unofficial Patch NVSE Plus",
+        "Yukichigai Unofficial Patch"
+      ],
+      "plugins": [
+        "FalloutNV.esm",
+        "DeadMoney.esm",
+        "HonestHearts.esm",
+        "OldWorldBlues.esm",
+        "LonesomeRoad.esm",
+        "GunRunnersArsenal.esm",
+        "ClassicPack.esm",
+        "MercenaryPack.esm",
+        "TribalPack.esm",
+        "CaravanPack.esm",
+        "YUP - Base Game + All DLC.esm",
+        "Unofficial Patch NVSE Plus.esp"
+      ]
+    }
+  ]
+}

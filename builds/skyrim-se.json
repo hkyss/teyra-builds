@@ -1,0 +1,198 @@
+{
+  "format": 16,
+  "id": "skyrim-se",
+  "title": "Foundation Build",
+  "version": "1.0.0",
+  "authors": [{ "name": "hkyss" }],
+  "license": "GPL-3.0",
+  "description": {
+    "en": "A clean Skyrim to build your own mod list on. Teyra keeps its own copy at 1.7.104, so the next Steam update won't break your SKSE plugins. It crashes less than the stock game, and when it does, the log says why.",
+    "ru": "Чистый Skyrim, на котором собирают свой список модов. Teyra держит отдельную копию игры версии 1.7.104, и очередное обновление в Steam не сломает плагины SKSE. Вылетает реже обычной игры, а если вылетит, в журнале будет причина."
+  },
+  "category": "advanced",
+  "gameId": "skyrim-se",
+  "folder": "Foundation Build",
+  "options": [
+    { "id": "language", "kind": "language", "values": ["english", "russian"], "default": "english" },
+    { "id": "profile", "kind": "profile", "labels": { "Base": { "ru": "Основной" }, "Test": { "ru": "Тестовый" } } }
+  ],
+  "art": {
+    "monogram": "SSE",
+    "tile": "linear-gradient(140deg, #5e7a9c 0%, #2a3a52 100%)",
+    "glow": ["#6f9bd8", "#8b7bff", "#3ad1c4"]
+  },
+  "mods": [
+    {
+      "name": "Skyrim Script Extender",
+      "nexusId": 30379,
+      "file": "Skyrim Script Extender (SKSE64) Steam",
+      "version": "2.3.1",
+      "target": "game",
+      "expect": ["Scripts/Actor.pex"],
+      "expectGame": ["skse64_loader.exe"]
+    },
+    {
+      "name": "Address Library for SKSE Plugins",
+      "nexusId": 32444,
+      "file": "Address Library All in One (1.7.104.0) v13",
+      "version": "13",
+      "expect": ["SKSE/Plugins/versionlib-1-7-104-0.bin"]
+    },
+    {
+      "name": "PapyrusUtil",
+      "nexusId": 13048,
+      "file": "PapyrusUtil AE SE - Scripting Utility Functions",
+      "version": "4.8",
+      "expect": ["SKSE/Plugins/PapyrusUtil.dll"]
+    },
+    {
+      "name": "powerofthree's Papyrus Extender",
+      "nexusId": 22854,
+      "file": "Papyrus Extender",
+      "folders": ["Required", "AE"],
+      "expect": ["SKSE/Plugins/po3_PapyrusExtender.dll"]
+    },
+    {
+      "name": "JContainers",
+      "nexusId": 16495,
+      "file": "JContainers SE",
+      "version": "4.3.2",
+      "expect": ["SKSE/Plugins/JContainers64.dll"]
+    },
+    {
+      "name": "Bug Fixes",
+      "nexusId": 33261,
+      "file": "Bug Fixes SSE Anniversary (1.7.99.0 And Later)",
+      "expect": ["SKSE/Plugins/BugFixesSSE.dll"]
+    },
+    {
+      "name": "powerofthree's Tweaks",
+      "nexusId": 51073,
+      "file": "powerofthree's Tweaks",
+      "folders": ["Required", "AE"],
+      "expect": ["SKSE/Plugins/po3_Tweaks.dll"]
+    },
+    {
+      "name": "Papyrus Tweaks NG",
+      "nexusId": 77779,
+      "file": "Papyrus Tweaks 4.2.1",
+      "expect": ["SKSE/Plugins/PapyrusTweaks.dll"]
+    },
+    {
+      "name": "SSE Display Tweaks",
+      "nexusId": 34705,
+      "file": "SSE Display Tweaks",
+      "expect": ["SKSE/Plugins/SSEDisplayTweaks.dll"]
+    },
+    {
+      "name": "Skyrim Cell Load Freeze Fix NG",
+      "nexusId": 160704,
+      "file": "skyrim-freeze-fix",
+      "expect": ["SKSE/Plugins/skyrim-freeze-fix.dll"]
+    },
+    {
+      "name": "Actor Limit Fix",
+      "nexusId": 32349,
+      "file": "Actor Limit Fix Anniversary (1.7.99.0 And Later)",
+      "expect": ["SKSE/Plugins/ActorLimitFix.dll"]
+    },
+    {
+      "name": "Crash Logger",
+      "nexusId": 59818,
+      "file": "CrashLogger",
+      "expect": ["SKSE/Plugins/CrashLogger.dll"]
+    },
+    {
+      "name": "Spell Perk Item Distributor",
+      "nexusId": 36869,
+      "file": "Spell Perk Item Distributor",
+      "expect": ["SKSE/Plugins/po3_SpellPerkItemDistributor.dll"]
+    },
+    {
+      "name": "Keyword Item Distributor",
+      "nexusId": 55728,
+      "file": "Keyword Item Distributor (SE AE)",
+      "folders": ["Required", "AE"],
+      "expect": ["SKSE/Plugins/po3_KeywordItemDistributor.dll"]
+    },
+    {
+      "name": "Base Object Swapper",
+      "nexusId": 60805,
+      "file": "Base Object Swapper",
+      "folders": ["AE"],
+      "expect": ["SKSE/Plugins/po3_BaseObjectSwapper.dll"]
+    },
+    {
+      "name": "ConsoleUtilSSE NG",
+      "nexusId": 76649,
+      "file": "ConsoleUtilSSE NG",
+      "expect": ["SKSE/Plugins/ConsoleUtilSSE.dll"]
+    },
+    {
+      "name": "More Informative Console",
+      "nexusId": 19250,
+      "file": "More Informative Console 1.2.3.2",
+      "expect": ["SKSE/Plugins/MoreInformativeConsole.dll"]
+    },
+    {
+      "name": "Unofficial Skyrim Special Edition Patch",
+      "nexusId": 266,
+      "file": "Unofficial Skyrim Special Edition Patch",
+      "expect": ["Unofficial Skyrim Special Edition Patch.esp"]
+    }
+  ],
+  "profiles": [
+    {
+      "name": "Base",
+      "mods": [
+        "Skyrim Script Extender",
+        "Address Library for SKSE Plugins",
+        "PapyrusUtil",
+        "powerofthree's Papyrus Extender",
+        "JContainers",
+        "Bug Fixes",
+        "powerofthree's Tweaks",
+        "Papyrus Tweaks NG",
+        "SSE Display Tweaks",
+        "Skyrim Cell Load Freeze Fix NG",
+        "Actor Limit Fix",
+        "Crash Logger",
+        "Spell Perk Item Distributor",
+        "Keyword Item Distributor",
+        "Base Object Swapper",
+        "ConsoleUtilSSE NG",
+        "More Informative Console",
+        "Unofficial Skyrim Special Edition Patch"
+      ],
+      "plugins": [
+        "Unofficial Skyrim Special Edition Patch.esp"
+      ]
+    },
+    {
+      "name": "Test",
+      "mods": [
+        "Skyrim Script Extender",
+        "Address Library for SKSE Plugins",
+        "PapyrusUtil",
+        "powerofthree's Papyrus Extender",
+        "JContainers",
+        "Bug Fixes",
+        "powerofthree's Tweaks",
+        "Papyrus Tweaks NG",
+        "SSE Display Tweaks",
+        "Skyrim Cell Load Freeze Fix NG",
+        "Actor Limit Fix",
+        "Crash Logger",
+        "Spell Perk Item Distributor",
+        "Keyword Item Distributor",
+        "Base Object Swapper",
+        "ConsoleUtilSSE NG",
+        "More Informative Console",
+        "Unofficial Skyrim Special Edition Patch"
+      ],
+      "plugins": [
+        "Unofficial Skyrim Special Edition Patch.esp"
+      ]
+    }
+  ]
+}

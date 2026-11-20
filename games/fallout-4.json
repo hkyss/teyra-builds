@@ -1,0 +1,8 @@
+{
+  "format": 16,
+  "id": "fallout-4",
+  "title": "Fallout 4",
+  "folder": "Fallout 4",
+  "stores": { "steam": "377160", "gog": "1998527297", "epic": "61d52ce4d09d41e48800c22784d13ae8" },
+  "order": 3
+}

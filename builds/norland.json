@@ -1,0 +1,51 @@
+{
+  "format": 16,
+  "id": "norland",
+  "title": "Foundation Build",
+  "version": "1.0.0",
+  "authors": [{ "name": "hkyss" }],
+  "license": "GPL-3.0",
+  "description": {
+    "en": "Norland with mod support switched on. Add the mods you like and turn them on or off from a menu inside the game.",
+    "ru": "Norland с включённой поддержкой модов. Добавляйте понравившиеся моды и включайте их из меню прямо в игре."
+  },
+  "category": "advanced",
+  "gameId": "norland",
+  "folder": "Foundation Build",
+  "options": [
+    { "id": "profile", "kind": "profile", "labels": { "Base": { "ru": "Основной" }, "Test": { "ru": "Тестовый" } } }
+  ],
+  "art": {
+    "monogram": "NL",
+    "tile": "linear-gradient(140deg, #7a8f5e 0%, #2e3a24 100%)",
+    "glow": ["#a9c27a", "#d8b45a", "#6fae9a"]
+  },
+  "mods": [
+    {
+      "name": "NLSE MO2 Plugin",
+      "nexusId": 6,
+      "file": "NLSE MO2 Plugin 0.3.1",
+      "version": "0.3.1",
+      "target": "manager",
+      "expect": ["plugins/basic_games/games/game_norland.py"]
+    },
+    {
+      "name": "NLSE",
+      "nexusId": 6,
+      "file": "NLSE 0.3.1",
+      "version": "0.3.1",
+      "expect": ["nlse.dll"]
+    },
+    {
+      "name": "hkyss - Mod Configuration Menu",
+      "nexusId": 7,
+      "file": "hkyss Mod Configuration Menu 1.6",
+      "version": "1.6",
+      "expect": ["hkyss - Mod Configuration Menu/mod.json", "NLSE/Plugins/mcm.dll"]
+    }
+  ],
+  "profiles": [
+    { "name": "Base", "mods": ["NLSE", "hkyss - Mod Configuration Menu"] },
+    { "name": "Test", "mods": ["NLSE", "hkyss - Mod Configuration Menu"] }
+  ]
+}

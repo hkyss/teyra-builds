@@ -1,0 +1,35 @@
+{
+  "format": 16,
+  "id": "norland",
+  "title": "Norland",
+  "folder": "Norland",
+  "stores": { "steam": "1857090" },
+  "order": 4,
+  "defaults": {
+    "systems": ["windows"],
+    "nexusDomain": "norland",
+    "options": [
+      { "id": "language", "kind": "language", "values": ["english", "russian", "german", "french", "italian", "spanish", "brazilian", "polish", "czech", "hungarian", "turkish", "ukrainian", "japanese", "koreana", "schinese", "tchinese"], "default": "english" }
+    ],
+    "game": {
+      "executable": "Norland.exe",
+      "version": "0.6157.10308.0"
+    },
+    "modOrganizer": {
+      "version": "2.5.2",
+      "archive": "Mod.Organizer-2.5.2.7z",
+      "url": "https://github.com/ModOrganizer2/modorganizer/releases/download/v2.5.2/Mod.Organizer-2.5.2.7z",
+      "sha256": "e6376efd87fd5ddd95aee959405e8f067afa526ea6c2c0c5aa03c5108bf4a815",
+      "gameName": "Norland",
+      "launcher": { "title": "Norland", "executable": "Norland.exe" },
+      "pluginList": "none",
+      "profileSettings": { "General": { "LocalSaves": "true", "LocalSettings": "true", "AutomaticArchiveInvalidation": "false" } },
+      "editions": { "steam": "Steam", "gog": "GOG", "epic": "Epic Games" }
+    },
+    "modArchive": { "keepTopFolder": true },
+    "userSettings": [
+      { "folder": "localData", "file": "Strategy/game_settings.json", "key": "language", "value": "{game.locale}" }
+    ],
+    "profiles": [{ "name": "Base", "mods": [] }]
+  }
+}

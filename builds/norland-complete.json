@@ -1,0 +1,77 @@
+{
+  "format": 16,
+  "id": "norland-complete",
+  "title": "Heirs of Norland",
+  "version": "1.0.0",
+  "authors": [{ "name": "hkyss" }],
+  "license": "GPL-3.0",
+  "description": {
+    "en": "A longer game of Norland. Your peasants raise children who take their place as they grow old, and the limits that used to hold a growing realm back are pushed further out. How far is up to you: the settings are in the mod menu in game.",
+    "ru": "Norland на долгую игру. Крестьяне растят детей, и те занимают место родителей, когда старики уходят, а пределы, которые сдерживали растущее королевство, отодвинуты. Насколько далеко, решаете вы: настройки в меню модов прямо в игре."
+  },
+  "category": "readyToPlay",
+  "gameId": "norland",
+  "folder": "Heirs of Norland",
+  "art": {
+    "monogram": "NL",
+    "tile": "linear-gradient(140deg, #b08a4a 0%, #3a2a18 100%)",
+    "glow": ["#d8b45a", "#a9c27a", "#e08a5a"]
+  },
+  "mods": [
+    {
+      "name": "NLSE MO2 Plugin",
+      "nexusId": 6,
+      "file": "NLSE MO2 Plugin 0.3.1",
+      "version": "0.3.1",
+      "target": "manager",
+      "expect": ["plugins/basic_games/games/game_norland.py"]
+    },
+    {
+      "name": "NLSE",
+      "nexusId": 6,
+      "file": "NLSE 0.3.1",
+      "version": "0.3.1",
+      "expect": ["nlse.dll"]
+    },
+    {
+      "name": "hkyss - Mod Configuration Menu",
+      "nexusId": 7,
+      "file": "hkyss Mod Configuration Menu 1.6",
+      "version": "1.6",
+      "expect": ["hkyss - Mod Configuration Menu/mod.json", "NLSE/Plugins/mcm.dll"]
+    },
+    {
+      "name": "hkyss - Peasant Families",
+      "nexusId": 8,
+      "file": "hkyss Peasant Families 1.1.2",
+      "version": "1.1.2",
+      "expect": ["hkyss - Peasant Families/mod.json", "NLSE/Plugins/families.dll"]
+    },
+    {
+      "name": "hkyss - Room to Grow",
+      "nexusId": 9,
+      "file": "hkyss Room To Grow 1.0",
+      "version": "1.0",
+      "expect": ["hkyss - Room to Grow/mod.json"]
+    },
+    {
+      "name": "hkyss - Your Own Limits",
+      "nexusId": 10,
+      "file": "hkyss Your Own Limits 1.0",
+      "version": "1.0",
+      "expect": ["hkyss - Your Own Limits/mod.json", "NLSE/Plugins/realm.dll"]
+    }
+  ],
+  "profiles": [
+    {
+      "name": "Base",
+      "mods": [
+        "NLSE",
+        "hkyss - Mod Configuration Menu",
+        "hkyss - Peasant Families",
+        "hkyss - Room to Grow",
+        "hkyss - Your Own Limits"
+      ]
+    }
+  ]
+}

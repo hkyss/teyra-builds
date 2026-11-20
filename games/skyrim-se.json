@@ -1,0 +1,78 @@
+{
+  "format": 16,
+  "id": "skyrim-se",
+  "title": "Skyrim Special Edition",
+  "folder": "Skyrim Special Edition",
+  "stores": { "steam": "489830", "gog": "1711230643", "epic": "ac82db5035584c7f8a2c548d98c86b2c" },
+  "order": 1,
+  "defaults": {
+    "systems": ["windows"],
+    "nexusDomain": "skyrimspecialedition",
+    "options": [
+      { "id": "language", "kind": "language", "values": ["english", "french", "german", "italian", "spanish", "polish", "russian", "japanese", "tchinese"], "default": "english" }
+    ],
+    "languageNames": {
+      "english": "ENGLISH",
+      "french": "FRENCH",
+      "german": "GERMAN",
+      "italian": "ITALIAN",
+      "spanish": "SPANISH",
+      "polish": "POLISH",
+      "russian": "RUSSIAN",
+      "japanese": "JAPANESE",
+      "tchinese": "CHINESE"
+    },
+    "game": {
+      "executable": "SkyrimSE.exe",
+      "version": "1.7.104.0"
+    },
+    "editor": {
+      "name": "Creation Kit",
+      "stores": { "steam": "1946180" },
+      "executable": "CreationKit.exe",
+      "files": ["CreationKit.ini", "Data/Scripts.zip"]
+    },
+    "modOrganizer": {
+      "version": "2.5.2",
+      "archive": "Mod.Organizer-2.5.2.7z",
+      "url": "https://github.com/ModOrganizer2/modorganizer/releases/download/v2.5.2/Mod.Organizer-2.5.2.7z",
+      "sha256": "e6376efd87fd5ddd95aee959405e8f067afa526ea6c2c0c5aa03c5108bf4a815",
+      "gameName": "Skyrim Special Edition",
+      "launcher": { "title": "SKSE", "executable": "skse64_loader.exe" },
+      "pluginList": "starred",
+      "profileSettings": { "General": { "LocalSaves": "true", "LocalSettings": "true", "AutomaticArchiveInvalidation": "false" } },
+      "editions": { "steam": "Steam", "gog": "GOG", "epic": "Epic Games" }
+    },
+    "modArchive": {
+      "dataFolder": "data",
+      "rootFolders": [
+        "skse", "scripts", "meshes", "textures", "interface", "mcm", "sound", "music", "seq",
+        "strings", "video", "grass", "lodsettings", "shadersfx", "calientetools",
+        "nemesis_engine", "pandora_engine", "source"
+      ]
+    },
+    "ini": {
+      "files": [
+        { "name": "Skyrim.ini", "seed": ["Skyrim_Default.ini"] },
+        { "name": "SkyrimPrefs.ini", "seed": ["Skyrim/SkyrimPrefs.ini", "High.ini"] },
+        { "name": "SkyrimCustom.ini" }
+      ],
+      "settings": [
+        { "file": "Skyrim.ini", "section": "General", "key": "sLanguage", "value": "{game.language}" },
+        { "file": "SkyrimPrefs.ini", "section": "Display", "key": "bFull Screen", "value": "0", "initialOnly": true },
+        { "file": "SkyrimPrefs.ini", "section": "Display", "key": "bBorderless", "value": "1", "initialOnly": true },
+        { "file": "SkyrimPrefs.ini", "section": "Display", "key": "iSize W", "value": "{screen.width}", "initialOnly": true },
+        { "file": "SkyrimPrefs.ini", "section": "Display", "key": "iSize H", "value": "{screen.height}", "initialOnly": true }
+      ],
+      "archiveSwap": {
+        "file": "Skyrim.ini",
+        "section": "Archive",
+        "key": "sResourceArchiveList2",
+        "source": "Skyrim_Default.ini",
+        "prefix": "Skyrim - Voices_",
+        "archive": "Skyrim - Voices_en0.bsa"
+      }
+    },
+    "profiles": [{ "name": "Base", "mods": [] }]
+  }
+}

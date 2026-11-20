@@ -1,0 +1,37 @@
+name: Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      level:
+        description: "patch for fixes, minor for new builds or games, major for a new format"
+        type: choice
+        options: [patch, minor, major]
+        default: patch
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      LEVEL: ${{ inputs.level }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Number the release
+        run: |
+          last=$(gh release list --limit 1 --json tagName --jq '.[0].tagName // "v0.0.0"')
+          IFS=. read -r major minor patch <<< "${last#v}"
+          case "$LEVEL" in
+            major) major=$((major + 1)); minor=0; patch=0 ;;
+            minor) minor=$((minor + 1)); patch=0 ;;
+            *) patch=$((patch + 1)) ;;
+          esac
+          echo "TAG=v$major.$minor.$patch" >> "$GITHUB_ENV"
+      - run: node scripts/check.mjs --without-launcher --bundle catalog.json "$TAG"
+      - run: gh release create "$TAG" catalog.json --title "$TAG" --notes "" --target "$GITHUB_SHA"

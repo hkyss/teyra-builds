@@ -1,0 +1,67 @@
+{
+  "format": 16,
+  "id": "fallout-nv",
+  "title": "Fallout: New Vegas",
+  "folder": "Fallout New Vegas",
+  "stores": { "steam": "22380", "gog": "1454587428", "epic": "5daeb974a22a435988892319b3a4f476" },
+  "order": 2,
+  "defaults": {
+    "systems": ["windows"],
+    "nexusDomain": "newvegas",
+    "options": [
+      { "id": "language", "kind": "language", "values": ["english", "french", "german", "italian", "spanish", "czech", "polish", "russian"], "default": "english" }
+    ],
+    "languageNames": {
+      "czech": "CZECH",
+      "english": "ENGLISH",
+      "french": "FRENCH",
+      "german": "GERMAN",
+      "italian": "ITALIAN",
+      "polish": "POLISH",
+      "russian": "RUSSIAN",
+      "spanish": "SPANISH"
+    },
+    "game": {
+      "executable": "FalloutNV.exe",
+      "version": "1.4.0.525"
+    },
+    "editor": {
+      "name": "GECK",
+      "executable": "GECK.exe"
+    },
+    "modOrganizer": {
+      "version": "2.5.2",
+      "archive": "Mod.Organizer-2.5.2.7z",
+      "url": "https://github.com/ModOrganizer2/modorganizer/releases/download/v2.5.2/Mod.Organizer-2.5.2.7z",
+      "sha256": "e6376efd87fd5ddd95aee959405e8f067afa526ea6c2c0c5aa03c5108bf4a815",
+      "gameName": "New Vegas",
+      "launcher": { "title": "NVSE", "executable": "nvse_loader.exe" },
+      "pluginList": "plain",
+      "profileSettings": { "General": { "LocalSaves": "true", "LocalSettings": "true", "AutomaticArchiveInvalidation": "false" } },
+      "editions": { "steam": "Steam", "gog": "GOG", "epic": "Epic Games" }
+    },
+    "modArchive": {
+      "dataFolder": "data",
+      "rootFolders": [
+        "nvse", "scripts", "meshes", "textures", "interface", "mcm", "shaders", "sound",
+        "menus", "config", "fonts", "keywords", "baseobjectswapper", "celloffsets", "uio",
+        "music", "video"
+      ]
+    },
+    "ini": {
+      "files": [
+        { "name": "Fallout.ini", "seed": ["Fallout_default.ini"] },
+        { "name": "FalloutPrefs.ini", "seed": ["High.ini"] },
+        { "name": "FalloutCustom.ini" },
+        { "name": "GECKCustom.ini" },
+        { "name": "GECKPrefs.ini" }
+      ],
+      "settings": [
+        { "file": "FalloutPrefs.ini", "section": "Display", "key": "bFull Screen", "value": "0", "initialOnly": true },
+        { "file": "FalloutPrefs.ini", "section": "Display", "key": "iSize W", "value": "{screen.width}", "initialOnly": true },
+        { "file": "FalloutPrefs.ini", "section": "Display", "key": "iSize H", "value": "{screen.height}", "initialOnly": true }
+      ]
+    },
+    "profiles": [{ "name": "Base", "mods": [] }]
+  }
+}

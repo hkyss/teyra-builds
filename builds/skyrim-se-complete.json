@@ -1,0 +1,1088 @@
+{
+  "format": 16,
+  "id": "skyrim-se-complete",
+  "title": "Skyrim Complete",
+  "version": "0.2.0",
+  "authors": [{ "name": "hkyss" }],
+  "license": "GPL-3.0",
+  "description": {
+    "en": "Draft of a ready-to-play Skyrim build. Not released.",
+    "ru": "Черновик готовой к игре сборки Skyrim. Не выпущена."
+  },
+  "category": "readyToPlay",
+  "gameId": "skyrim-se",
+  "folder": "Skyrim Complete",
+  "options": [
+    { "id": "language", "kind": "language", "values": ["english", "russian"], "default": "english" }
+  ],
+  "art": {
+    "monogram": "SKY",
+    "tile": "linear-gradient(140deg, #6b7f95 0%, #1f2a38 100%)",
+    "glow": [
+      "#9fb8d8",
+      "#c9a86a",
+      "#6fd1c4"
+    ]
+  },
+  "editor": null,
+  "mods": [
+    {
+      "name": "Skyrim Script Extender",
+      "nexusId": 30379,
+      "file": "Skyrim Script Extender (SKSE64) Steam",
+      "version": "2.2.8",
+      "target": "game",
+      "expect": [
+        "Scripts/Actor.pex"
+      ],
+      "expectGame": [
+        "skse64_loader.exe"
+      ],
+      "fileId": 792256
+    },
+    {
+      "name": "Address Library for SKSE Plugins",
+      "nexusId": 32444,
+      "file": "All in one (1.6.X)",
+      "version": "11",
+      "expect": [
+        "SKSE/Plugins/versionlib-1-6-1170-0.bin"
+      ],
+      "fileId": 470707
+    },
+    {
+      "name": "PapyrusUtil",
+      "nexusId": 13048,
+      "file": "PapyrusUtil AE SE - Scripting Utility Functions",
+      "version": "4.6",
+      "expect": [
+        "SKSE/Plugins/PapyrusUtil.dll"
+      ]
+    },
+    {
+      "name": "powerofthree's Papyrus Extender",
+      "nexusId": 22854,
+      "file": "Papyrus Extender",
+      "folders": [
+        "Required",
+        "AE1170"
+      ],
+      "expect": [
+        "SKSE/Plugins/po3_PapyrusExtender.dll"
+      ]
+    },
+    {
+      "name": "JContainers",
+      "nexusId": 16495,
+      "file": "JContainers SE",
+      "version": "4.3.3",
+      "expect": [
+        "SKSE/Plugins/JContainers64.dll"
+      ],
+      "fileId": 813180
+    },
+    {
+      "name": "Bug Fixes",
+      "nexusId": 33261,
+      "file": "Bug Fixes SSE - Anniversary Edition (1.6.629.0 and later)",
+      "expect": [
+        "SKSE/Plugins/BugFixesSSE.dll"
+      ]
+    },
+    {
+      "name": "powerofthree's Tweaks",
+      "nexusId": 51073,
+      "file": "powerofthree's Tweaks",
+      "folders": [
+        "Required",
+        "AE1170"
+      ],
+      "expect": [
+        "SKSE/Plugins/po3_Tweaks.dll"
+      ]
+    },
+    {
+      "name": "Papyrus Tweaks NG",
+      "nexusId": 77779,
+      "file": "Papyrus Tweaks 4.2.1",
+      "expect": [
+        "SKSE/Plugins/PapyrusTweaks.dll"
+      ]
+    },
+    {
+      "name": "SSE Display Tweaks",
+      "nexusId": 34705,
+      "file": "SSE Display Tweaks",
+      "expect": [
+        "SKSE/Plugins/SSEDisplayTweaks.dll"
+      ]
+    },
+    {
+      "name": "Skyrim Cell Load Freeze Fix NG",
+      "nexusId": 160704,
+      "file": "skyrim-freeze-fix",
+      "expect": [
+        "SKSE/Plugins/skyrim-freeze-fix.dll"
+      ]
+    },
+    {
+      "name": "Actor Limit Fix",
+      "nexusId": 32349,
+      "file": "Actor Limit Fix - Anniversary Edition (1.6.629.0 and later)",
+      "expect": [
+        "SKSE/Plugins/ActorLimitFix.dll"
+      ]
+    },
+    {
+      "name": "Crash Logger",
+      "nexusId": 59818,
+      "file": "CrashLogger",
+      "expect": [
+        "SKSE/Plugins/CrashLogger.dll"
+      ]
+    },
+    {
+      "name": "Spell Perk Item Distributor",
+      "nexusId": 36869,
+      "file": "Spell Perk Item Distributor",
+      "expect": [
+        "SKSE/Plugins/po3_SpellPerkItemDistributor.dll"
+      ]
+    },
+    {
+      "name": "Keyword Item Distributor",
+      "nexusId": 55728,
+      "file": "Keyword Item Distributor (SE AE)",
+      "folders": [
+        "Required",
+        "AE1170"
+      ],
+      "expect": [
+        "SKSE/Plugins/po3_KeywordItemDistributor.dll"
+      ]
+    },
+    {
+      "name": "Base Object Swapper",
+      "nexusId": 60805,
+      "file": "Base Object Swapper",
+      "folders": [
+        "AE1170"
+      ],
+      "expect": [
+        "SKSE/Plugins/po3_BaseObjectSwapper.dll"
+      ]
+    },
+    {
+      "name": "ConsoleUtilSSE NG",
+      "nexusId": 76649,
+      "file": "ConsoleUtilSSE NG",
+      "expect": [
+        "SKSE/Plugins/ConsoleUtilSSE.dll"
+      ]
+    },
+    {
+      "name": "More Informative Console",
+      "nexusId": 19250,
+      "file": "More Informative Console 1.2.3.2",
+      "expect": [
+        "SKSE/Plugins/MoreInformativeConsole.dll"
+      ]
+    },
+    {
+      "name": "Unofficial Skyrim Special Edition Patch",
+      "nexusId": 266,
+      "file": "Unofficial Skyrim Special Edition Patch",
+      "expect": [
+        "Unofficial Skyrim Special Edition Patch.esp"
+      ]
+    },
+    {
+      "name": "Skyrim Downgrade Patches",
+      "nexusId": 169962,
+      "file": "Source",
+      "version": "1.7.104.4",
+      "expect": [
+        "to_16/Skyrim_1_7_104_to_1_6_1170_patch.bsdiff"
+      ],
+      "when": { "store": ["steam"] }
+    },
+    {
+      "name": "RaceMenu",
+      "nexusId": 19080,
+      "file": "RaceMenu Anniversary Edition v0-4-20-0",
+      "version": "0.4.20.0",
+      "expect": [
+        "SKSE/Plugins/skee64.dll"
+      ]
+    },
+    {
+      "name": "OBody NG",
+      "nexusId": 77016,
+      "file": "OBody NG",
+      "version": "5.3.1",
+      "expect": [
+        "SKSE/Plugins/OBody.dll"
+      ]
+    },
+    {
+      "name": "XP32 Maximum Skeleton Special Extended",
+      "nexusId": 1988,
+      "file": "XP32 Maximum Skeleton Special Extended",
+      "version": "5.06",
+      "folders": [
+        "Creature Meshes",
+        "Skeleton Meshes"
+      ],
+      "place": [
+        {
+          "from": "Character Creation/None/XPMSE.esp",
+          "to": ""
+        }
+      ],
+      "expect": [
+        "XPMSE.esp"
+      ]
+    },
+    {
+      "name": "XP32 Maximum Skeleton Special Extended - AHO Patch",
+      "nexusId": 65245,
+      "file": "XPMSSE - AHO Patch",
+      "version": "1.0",
+      "expect": [
+        "meshes/dwarfsphere/main/other/dwaspdwemerologist01.nif"
+      ]
+    },
+    {
+      "name": "XP32 Maximum Skeleton Special Extended - Undeath Skeleton Patch",
+      "nexusId": 50694,
+      "file": "Undeath - XPMSSE - Strange Runes - Skeleton Patch",
+      "version": "1.1",
+      "expect": [
+        "meshes/actors/dragonpriest/character assets/skeleton.nif"
+      ]
+    },
+    {
+      "name": "Modular HDT-SMP Hairstyles",
+      "nexusId": 93608,
+      "file": "Modular SMP Hairstyles",
+      "version": "1.031",
+      "expect": [
+        "evgmodularSMPhair.esp"
+      ]
+    },
+    {
+      "name": "Valkyr HDT-SMP Hairstyles 1",
+      "nexusId": 63181,
+      "file": "HDT-SMP Hairpack 01",
+      "version": "1.1",
+      "expect": [
+        "_Fuse00HairPack01.esp"
+      ]
+    },
+    {
+      "name": "Valkyr HDT-SMP Hairstyles 2",
+      "nexusId": 64259,
+      "file": "HDT-SMP Hairpack 02",
+      "version": "1.0",
+      "expect": [
+        "_Fuse00HairPack02_ESL.esp"
+      ]
+    },
+    {
+      "name": "KS Hairdos - HDT SMP",
+      "nexusId": 31300,
+      "file": "KS Hairdos SMP",
+      "version": "1.4.3",
+      "fileId": 154433,
+      "folders": [
+        "00 Core"
+      ],
+      "expect": [
+        "KSHairdosSMP.esp"
+      ]
+    },
+    {
+      "name": "BodySlide and Outfit Studio",
+      "nexusId": 201,
+      "file": "BodySlide and Outfit Studio - v6.1.0",
+      "version": "6.1.0",
+      "place": [
+        {
+          "from": "CalienteTools",
+          "to": "CalienteTools"
+        }
+      ],
+      "expect": [
+        "CalienteTools/BodySlide/BodySlide.exe"
+      ]
+    },
+    {
+      "name": "Caliente's Beautiful Bodies Enhancer",
+      "nexusId": 198,
+      "file": "Caliente's Beautiful Bodies Enhancer CBBE - v2.0.1",
+      "version": "2.0.1",
+      "fileId": 416493,
+      "folders": [
+        "09 Outfits BodySlide",
+        "07 Outfits Curvy",
+        "28 Morph Files (Outfits)",
+        "00 Required (Slim)",
+        "10 Face Pack",
+        "12 Thin + Trimmed Brows",
+        "26 RaceMenu Morphs",
+        "27 Morph Files (Body)",
+        "01 Curvy",
+        "11 Pubic Hair"
+      ],
+      "expect": [
+        "CBBE.esp"
+      ]
+    },
+    {
+      "name": "Caliente's Beautiful Bodies Enhancer - CC Outfits",
+      "nexusId": 198,
+      "file": "CBBE AE-CC Outfits",
+      "version": "2.0.0",
+      "fileId": 414062,
+      "expect": [
+        "meshes/armor/knightsofthenine/bootsf_0.nif"
+      ]
+    },
+    {
+      "name": "Caliente's Beautiful Bodies Enhancer - CC Outfits - No Rim Lighting",
+      "nexusId": 198,
+      "file": "CBBE Outfits - No Rim Lighting",
+      "version": "2.0.0",
+      "fileId": 414063,
+      "expect": [
+        "meshes/armor/wolf/bodyf_0.nif"
+      ]
+    },
+    {
+      "name": "CBPC - Physics with Collisions",
+      "nexusId": 21224,
+      "file": "CBPC - Fomod installer - MAIN FILE",
+      "version": "1.7.3",
+      "place": [
+        {
+          "from": "00 Data/SSE 1.6.1170",
+          "to": "SKSE/Plugins"
+        },
+        {
+          "from": "00 Data/Scripts",
+          "to": "Scripts"
+        },
+        {
+          "from": "00 Data/CBPCMasterConfig.txt",
+          "to": "SKSE/Plugins"
+        },
+        {
+          "from": "00 Data/CBPCollisionConfig_Yuriana.txt",
+          "to": "SKSE/Plugins"
+        },
+        {
+          "from": "00 Data/CBPCPlayerCollisionEventConfig.txt",
+          "to": "SKSE/Plugins"
+        },
+        {
+          "from": "00 Data/CBPCSystem.ini",
+          "to": "SKSE/Plugins"
+        },
+        {
+          "from": "00 Data/CBBE Curvy/SKSE/Plugins/CBPCollisionConfig.txt",
+          "to": "SKSE/Plugins"
+        },
+        {
+          "from": "00 Data/Bounce1/CBPConfig.txt",
+          "to": "SKSE/Plugins"
+        },
+        {
+          "from": "00 Data/amplitude1",
+          "to": "SKSE/Plugins"
+        }
+      ],
+      "expect": [
+        "SKSE/Plugins/cbp.dll"
+      ]
+    },
+    {
+      "name": "Caliente's Beautiful Bodies Enhancer - 3BA",
+      "nexusId": 30174,
+      "file": "CBBE 3BA (3BBB)",
+      "version": "2.47",
+      "fileId": 360034,
+      "folders": [
+        "00 Base",
+        "15 RaceMenuMorphs/00 RaceMenuMorphs - CBBE",
+        "30 Vagina Texture/00 base - 2K",
+        "00 Base - NeverNude",
+        "10 Physics Patch/00 CBPC Base",
+        "10 Physics Patch/76 CBPC S - BBL",
+        "10 Physics Patch/79 CBPC BBL - Less",
+        "10 Physics Patch/99 Only CBPC",
+        "30 Vagina Texture/22 pale - 2K",
+        "10 Physics Patch/97 CBPC NoPushUp",
+        "10 Physics Patch/97 CBPC NoGravity",
+        "10 Physics Patch/75 CBPC Separation",
+        "10 Physics Patch/97 CBPC NoMoreGravity",
+        "10 Physics Patch/11 Type B",
+        "10 Physics Patch/87 CBPC NoAnal",
+        "10 Physics Patch/05 CBPCSystem02",
+        "10 Physics Patch/86 CBPC NoVagina",
+        "10 Physics Patch/83 CBPC Breast A-A",
+        "10 Physics Patch/82 CBPC Collision B-B",
+        "10 Physics Patch/92 CBPC Very softness"
+      ],
+      "place": [
+        {
+          "from": "10 Physics Patch/99 Only CBPC/SKSE/Plugins/hdtSkinnedMeshConfigs/defaultBBPs.xml",
+          "to": "SKSE/Plugins/hdtSkinnedMeshConfigs"
+        }
+      ],
+      "expect": [
+        "3BBB.esp"
+      ]
+    },
+    {
+      "name": "Caliente's Beautiful Bodies Enhancer - 3BA - Vanilla Outfits",
+      "nexusId": 51610,
+      "file": "3BA Vanilla",
+      "version": "2.5",
+      "expect": [
+        "CalienteTools/BodySlide/SliderGroups/3BA Vanilla.xml"
+      ]
+    },
+    {
+      "name": "Caliente's Beautiful Bodies Enhancer - 3BA - Vanilla Outfits - No Rim Lighting",
+      "nexusId": 59268,
+      "file": "3BA Vanilla Armors - No Rim Lighting",
+      "version": "1.3",
+      "expect": [
+        "CalienteTools/BodySlide/ShapeData/3BA Vanilla/Body/3BA Wolf.nif"
+      ]
+    },
+    {
+      "name": "Caliente's Beautiful Bodies Enhancer - 3BA - CC Outfits",
+      "nexusId": 62774,
+      "file": "CBBE 3BA Creation Club",
+      "version": "1.2",
+      "fileId": 381956,
+      "expect": [
+        "CalienteTools/BodySlide/SliderGroups/CBBE 3BA Creation Club.xml"
+      ]
+    },
+    {
+      "name": "Caliente's Beautiful Bodies Enhancer - 3BA - The Wheels of Lull Patch",
+      "nexusId": 111214,
+      "file": "The Wheels of Lull CBBE 3BA and HIMBO Patch",
+      "version": "1.0",
+      "expect": [
+        "WheelsOfLull CBBE 3BA and HIMBO Patch.esp"
+      ]
+    },
+    {
+      "name": "Vanilla Hair Remake - SMP",
+      "nexusId": 63979,
+      "file": "Vanilla hair remake SMP",
+      "version": "1.0.3",
+      "expect": [
+        "meshes/actors/character/character assets/hair/smp/nord01.xml"
+      ]
+    },
+    {
+      "name": "Female Hands Redone - 3BA",
+      "nexusId": 90713,
+      "file": "3BA Patch for CBBE",
+      "version": "1.0.0",
+      "expect": [
+        "CalienteTools/BodySlide/ShapeData/Hands Redone/F/Hands Redone F Hands.nif"
+      ]
+    },
+    {
+      "name": "Nemesis - Creatures Behaviour",
+      "nexusId": 45966,
+      "file": "Nemesis Creature Behaivour Compatiblity - Main",
+      "version": "1.4",
+      "folders": [
+        "CoreFiles"
+      ],
+      "expect": [
+        "meshes/actors/cow/behaviors/noncombatidle.hkx"
+      ]
+    },
+    {
+      "name": "Nemesis - Creatures Behaivour - WereWolf Addon",
+      "nexusId": 45966,
+      "file": "Nemesis Creature Behaivour - WereWolf Addon",
+      "version": "1.4",
+      "expect": [
+        "meshes/actors/werewolfbeast/characters/Nemesis_werewolf.xml"
+      ]
+    },
+    {
+      "name": "Nemesis - Offset Movement Animation",
+      "nexusId": 110408,
+      "file": "Offset Movement Animation",
+      "version": "1.2",
+      "expect": [
+        "Nemesis_Engine/mod/gpma/info.ini"
+      ]
+    },
+    {
+      "name": "Faster HDT-SMP",
+      "nexusId": 57339,
+      "file": "Faster HDT-SMP",
+      "version": "3.0.6",
+      "fileId": 755757,
+      "place": [
+        {
+          "from": "FSMPM",
+          "to": ""
+        },
+        {
+          "from": "SKSE",
+          "to": "SKSE"
+        },
+        {
+          "from": "Scripts",
+          "to": "Scripts"
+        },
+        {
+          "from": "Source",
+          "to": "Source"
+        },
+        {
+          "from": "FSMPV/hdtSMP64.xsd",
+          "to": "SKSE/Plugins"
+        },
+        {
+          "from": "raw-vs2022-windows-avx2",
+          "to": ""
+        }
+      ],
+      "expect": [
+        "SKSE/Plugins/hdtSMP64.dll"
+      ]
+    },
+    {
+      "name": "CBPC Equipment Physics",
+      "nexusId": 58990,
+      "file": "CBPC Equipment Physics SE and AE",
+      "version": "1.3.0",
+      "folders": [
+        "80 MasterConfig - One Handed Sword (P)",
+        "01 Base - Tight",
+        "83 MasterConfig - Bow and Quiver (P)",
+        "84 MasterConfig - CrossBow and Bolt (P)",
+        "82 MasterConfig - Dagger (P)",
+        "81 MasterConfig - Two Handed Sword (P)",
+        "85 MasterConfig - Staff (P)"
+      ],
+      "expect": [
+        "SKSE/Plugins/CBPConfig_Equipment_Staff.txt"
+      ]
+    },
+    {
+      "name": "Animation Motion Revolution",
+      "nexusId": 50258,
+      "file": "Animation Motion Revolution",
+      "version": "1.5.3",
+      "expect": [
+        "SKSE/Plugins/AnimationMotionRevolution.dll"
+      ]
+    },
+    {
+      "name": "Animation Queue Fix",
+      "nexusId": 82395,
+      "file": "Animation Queue Fix",
+      "version": "1.0.1",
+      "fileId": 348271,
+      "expect": [
+        "SKSE/Plugins/AnimationQueueFix.dll"
+      ]
+    },
+    {
+      "name": "Payload Interpreter",
+      "nexusId": 65089,
+      "file": "Payload Interpreter",
+      "version": "1.1.0",
+      "expect": [
+        "SKSE/Plugins/PayloadInterpreter.dll"
+      ]
+    },
+    {
+      "name": "Paired Animation Improvements",
+      "nexusId": 99621,
+      "file": "Paired Animation Improvements",
+      "version": "1.0.2",
+      "fileId": 466426,
+      "expect": [
+        "SKSE/Plugins/PairedAnimationImprovements.dll"
+      ]
+    },
+    {
+      "name": "Open Animation Replacer",
+      "nexusId": 92109,
+      "file": "Open Animation Replacer",
+      "version": "2.3.6",
+      "fileId": 518680,
+      "expect": [
+        "SKSE/Plugins/OpenAnimationReplacer.dll"
+      ]
+    },
+    {
+      "name": "Open Animation Replacer - Detection Plugin",
+      "nexusId": 104806,
+      "file": "Open Animation Replacer - Detection Plugin",
+      "version": "2.1.1",
+      "fileId": 506567,
+      "expect": [
+        "SKSE/Plugins/OpenAnimationReplacer-DetectionPlugin.dll"
+      ]
+    },
+    {
+      "name": "Open Animation Replacer - Dialogue Plugin",
+      "nexusId": 107186,
+      "file": "Open Animation Replacer - Dialogue Plugin",
+      "version": "1.0.0",
+      "fileId": 452591,
+      "expect": [
+        "SKSE/Plugins/OpenAnimationReplacer-DialoguePlugin.dll"
+      ]
+    },
+    {
+      "name": "Open Animation Replacer - IED Conditions",
+      "nexusId": 98308,
+      "file": "Open Animation Replacer - IED conditions",
+      "version": "1.0.2",
+      "expect": [
+        "SKSE/Plugins/OpenAnimationReplacer-IEDConditionExtensions.dll"
+      ]
+    },
+    {
+      "name": "Stances - Dynamic Animation Sets",
+      "nexusId": 40484,
+      "file": "Stances - KeyUtils version",
+      "version": "1.5.1",
+      "expect": [
+        "Stances - Dynamic Weapon Movesets SE.esp"
+      ]
+    },
+    {
+      "name": "Stances - Dynamic Animation Sets (Add-On)",
+      "nexusId": 41251,
+      "file": "Stances - Add-On",
+      "version": "1.13",
+      "expect": [
+        "Stances - Add-On.esp"
+      ]
+    },
+    {
+      "name": "Comprehensive Attack Speed Patch",
+      "nexusId": 89042,
+      "file": "CARP Main File",
+      "version": "1.1.2.8",
+      "fileId": 482082,
+      "expect": [
+        "SKSE/Plugins/ComprehensiveAttackRatePatch.dll"
+      ]
+    },
+    {
+      "name": "True Directional Movement",
+      "nexusId": 51614,
+      "file": "True Directional Movement",
+      "version": "2.2.5",
+      "fileId": 437371,
+      "expect": [
+        "SKSE/Plugins/TrueDirectionalMovement.dll"
+      ]
+    },
+    {
+      "name": "True Directional Movement - Boss Ini Tweaks",
+      "nexusId": 53238,
+      "file": "True HUD Boss Ini Tweaks",
+      "version": "1.4",
+      "expect": [
+        "SKSE/Plugins/TrueDirectionalMovement/TrueDirectionalMovement_LK_Tweaks_enemy_blacklist.ini"
+      ]
+    },
+    {
+      "name": "True Directional Movement - Wheels of Lull",
+      "nexusId": 54119,
+      "file": "TrueHUD - Wheels of Lull",
+      "version": "1.1",
+      "expect": [
+        "SKSE/Plugins/TrueHUD/TrueDirectionalMovement__WheelsOfLull_Whitelist.ini"
+      ]
+    },
+    {
+      "name": "True Directional Movement - GV's Boss Bar Integration",
+      "nexusId": 64949,
+      "file": "GV's TrueHUD Boss Bar Integration for various Quest and New Lands",
+      "version": "1.0",
+      "expect": [
+        "SKSE/Plugins/TrueDirectionalMovement/TrueDirectionalMovement__Beyond Reach.ini"
+      ]
+    },
+    {
+      "name": "True Directional Movement - Curated Bosses",
+      "nexusId": 53406,
+      "file": "TrueHUD Curated Bosses",
+      "version": "1.2",
+      "expect": [
+        "SKSE/Plugins/TrueHUD/TrueHUD_curatedbosses.ini"
+      ]
+    },
+    {
+      "name": "True Directional Movement - Mounted Archery Fix",
+      "nexusId": 171762,
+      "file": "TDM - 360 Horseback Archery Fix",
+      "version": "1.0.1",
+      "expect": [
+        "Nemesis_Engine/mod/tdmh/horsebehavior/#0170.txt"
+      ]
+    },
+    {
+      "name": "Disable Turn Animation",
+      "nexusId": 78106,
+      "file": "Disable Turn Animation SE I AE",
+      "version": "1.0",
+      "fileId": 328647,
+      "expect": [
+        "Disable Turn Animation.esp"
+      ]
+    },
+    {
+      "name": "Dynamic Animation Casting - NG",
+      "nexusId": 73293,
+      "file": "Dynamic Animation Casting NG Plus",
+      "version": "3.2.4",
+      "expect": [
+        "SKSE/plugins/loki_DynamicAnimationCasting.dll"
+      ]
+    },
+    {
+      "name": "Stagger Effect Fix NG",
+      "nexusId": 110508,
+      "file": "Stagger Effect Fix",
+      "version": "1.0.2",
+      "fileId": 466805,
+      "expect": [
+        "SKSE/Plugins/StaggerEffectFix.dll"
+      ]
+    },
+    {
+      "name": "First Person Animation Teleport Bug Fix",
+      "nexusId": 92795,
+      "file": "1st Person Interact Animation Teleport Bug Fix",
+      "version": "1.0.0",
+      "expect": [
+        "Nemesis_Engine/mod/tpbgfx/info.ini"
+      ]
+    },
+    {
+      "name": "Reanimated NPC Animations",
+      "nexusId": 79079,
+      "file": "Reanimated NPC Animations - DAR OAR",
+      "version": "1.2",
+      "expect": [
+        "Reanimated Detector.esp"
+      ]
+    },
+    {
+      "name": "EVG Animated Traversal",
+      "nexusId": 63232,
+      "file": "EVG Animated Traversal - Framework 2.1",
+      "version": "2.1",
+      "folders": [
+        "01 EVGATCore",
+        "02 Subtle Marker"
+      ],
+      "expect": [
+        "EVGAnimatedTraversal.esl"
+      ]
+    },
+    {
+      "name": "Unlocked 1st Person Combat",
+      "nexusId": 164095,
+      "file": "Unlocked 1st Person Combat",
+      "version": "1.2",
+      "fileId": 692704,
+      "place": [
+        {
+          "from": "fomod/Nemesis_Engine/mod/ufpca",
+          "to": "Nemesis_Engine/mod/ufpca"
+        }
+      ],
+      "expect": [
+        "Nemesis_Engine/mod/ufpca/info.ini"
+      ]
+    },
+    {
+      "name": "Vanilla Attack Annotation Fix",
+      "nexusId": 123805,
+      "file": "Vanilla Attack Annotation Fix",
+      "version": "v0.61",
+      "expect": [
+        "Nemesis_Engine/mod/fvpa/info.ini"
+      ]
+    },
+    {
+      "name": "No Opposite Gender Animations NG",
+      "nexusId": 101357,
+      "file": "NoOppositeGenderAnimsNG",
+      "version": "1.2",
+      "expect": [
+        "SKSE/Plugins/NoOppositeGenderAnims.dll"
+      ]
+    },
+    {
+      "name": "Pandora Behaviour Engine",
+      "nexusId": 133232,
+      "file": "Pandora Behaviour Engine v5.0.0-beta",
+      "version": "5.0.0-beta",
+      "fileId": 813165,
+      "expect": [
+        "Pandora Behaviour Engine+.exe"
+      ]
+    },
+    {
+      "name": "Pandora XPMSE Behavior Patch",
+      "nexusId": 133232,
+      "file": "Pandora XPMSE Behavior Patch",
+      "fileId": 788867,
+      "expect": [
+        "Nemesis_Engine/mod/xpmse/info.ini"
+      ],
+      "version": "v1.0.1"
+    }
+  ],
+  "downgrade": {
+    "version": "1.6.1170.0",
+    "mod": "Skyrim Downgrade Patches",
+    "when": { "store": ["steam"] },
+    "files": [
+      {
+        "file": "SkyrimSE.exe",
+        "patch": "to_16/Skyrim_1_7_104_to_1_6_1170_patch.bsdiff",
+        "from": "846efccf0c1374d71f892907f46549560f2fcb0a75cb87a3eed438baa0f1402f",
+        "to": "c434208894f07f604b852f29b8edc3a58c4de63de783373733e72b2b73f33be9"
+      },
+      {
+        "file": "SkyrimSELauncher.exe",
+        "patch": "to_16/SkyrimSELauncher_1_7_104_to_1_6_1170_patch.bsdiff",
+        "from": "9204f00ba4e0093f00fd461883f171f1b98f7d7de27969ff5e41ba3608ae271b",
+        "to": "ce2a1b3f9727c8b53ffb8e0bccd2bbed2bd8bec47b0ab8552c2850caa05e68b1"
+      },
+      {
+        "file": "Data/Skyrim - Shaders.bsa",
+        "patch": "to_16/Skyrim - Shaders_1_7_104_to_1_6_1170_patch.bsdiff",
+        "from": "fd1ba630f443353ed21ed4ca0380968f9c7091c8434518ea3cc79bc6d38c18e7",
+        "to": "4685203a8f115937e34fab3879c6b599734d8a913a698891866ed72385b5cfa5"
+      }
+    ]
+  },
+  "profiles": [
+    {
+      "name": "Base",
+      "mods": [
+        "Skyrim Script Extender",
+        "Address Library for SKSE Plugins",
+        "PapyrusUtil",
+        "powerofthree's Papyrus Extender",
+        "JContainers",
+        "Bug Fixes",
+        "powerofthree's Tweaks",
+        "Papyrus Tweaks NG",
+        "SSE Display Tweaks",
+        "Skyrim Cell Load Freeze Fix NG",
+        "Actor Limit Fix",
+        "Crash Logger",
+        "Spell Perk Item Distributor",
+        "Keyword Item Distributor",
+        "Base Object Swapper",
+        "ConsoleUtilSSE NG",
+        "More Informative Console",
+        "Unofficial Skyrim Special Edition Patch",
+        "RaceMenu",
+        "OBody NG",
+        "OBody Settings",
+        "XP32 Maximum Skeleton Special Extended",
+        "XP32 Maximum Skeleton Special Extended - AHO Patch",
+        "XP32 Maximum Skeleton Special Extended - Undeath Skeleton Patch",
+        "Modular HDT-SMP Hairstyles",
+        "Valkyr HDT-SMP Hairstyles 1",
+        "Valkyr HDT-SMP Hairstyles 2",
+        "KS Hairdos - HDT SMP",
+        "BodySlide and Outfit Studio",
+        "Caliente's Beautiful Bodies Enhancer",
+        "Caliente's Beautiful Bodies Enhancer - CC Outfits",
+        "Caliente's Beautiful Bodies Enhancer - CC Outfits - No Rim Lighting",
+        "CBPC - Physics with Collisions",
+        "Caliente's Beautiful Bodies Enhancer - 3BA",
+        "Caliente's Beautiful Bodies Enhancer - 3BA - Vanilla Outfits",
+        "Caliente's Beautiful Bodies Enhancer - 3BA - Vanilla Outfits - No Rim Lighting",
+        "Caliente's Beautiful Bodies Enhancer - 3BA - CC Outfits",
+        "Caliente's Beautiful Bodies Enhancer - 3BA - The Wheels of Lull Patch",
+        "Vanilla Hair Remake - SMP",
+        "Female Hands Redone - 3BA",
+        "Nemesis - Creatures Behaviour",
+        "Nemesis - Creatures Behaivour - WereWolf Addon",
+        "Nemesis - Offset Movement Animation",
+        "Faster HDT-SMP",
+        "CBPC Equipment Physics",
+        "Animation Motion Revolution",
+        "Animation Queue Fix",
+        "Payload Interpreter",
+        "Paired Animation Improvements",
+        "Open Animation Replacer",
+        "Open Animation Replacer - Detection Plugin",
+        "Open Animation Replacer - Dialogue Plugin",
+        "Open Animation Replacer - IED Conditions",
+        "Stances - Dynamic Animation Sets",
+        "Stances - Dynamic Animation Sets (Add-On)",
+        "Comprehensive Attack Speed Patch",
+        "True Directional Movement",
+        "True Directional Movement - Boss Ini Tweaks",
+        "True Directional Movement - Wheels of Lull",
+        "True Directional Movement - GV's Boss Bar Integration",
+        "True Directional Movement - Curated Bosses",
+        "True Directional Movement - Mounted Archery Fix",
+        "Disable Turn Animation",
+        "Dynamic Animation Casting - NG",
+        "Stagger Effect Fix NG",
+        "First Person Animation Teleport Bug Fix",
+        "Reanimated NPC Animations",
+        "EVG Animated Traversal",
+        "Unlocked 1st Person Combat",
+        "Vanilla Attack Annotation Fix",
+        "No Opposite Gender Animations NG",
+        "Pandora Behaviour Engine",
+        "Pandora XPMSE Behavior Patch",
+        "BodySlide Output",
+        "Pandora Output"
+      ],
+      "plugins": [
+        "Unofficial Skyrim Special Edition Patch.esp",
+        "RaceMenu.esp",
+        "RaceMenuPlugin.esp",
+        "OBody.esp",
+        "EVGAnimatedTraversal.esl",
+        "evgmodularSMPhair.esp",
+        "_Fuse00HairPack01.esp",
+        "_Fuse00HairPack02_ESL.esp",
+        "KSHairdosSMP.esp",
+        "CBBE.esp",
+        "3BBB.esp",
+        "RaceMenuMorphsCBBE.esp",
+        "XPMSE.esp",
+        "Stances - Add-On.esp",
+        "TrueDirectionalMovement.esp",
+        "Disable Turn Animation.esp",
+        "Reanimated Detector.esp"
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "name": "BodySlide",
+      "mod": "BodySlide and Outfit Studio",
+      "executable": "CalienteTools/BodySlide/BodySlide.exe",
+      "arguments": "--groupbuild \"CBBE,3BA,3BBB,CBBE Bodies,CBBE Vanilla Outfits,CBBE Vanilla Outfits Physics\" -t \"{tool.output}\" -p \"- Zeroed Sliders -\" -q --tri",
+      "output": "BodySlide Output",
+      "done": "meshes"
+    },
+    {
+      "name": "Pandora",
+      "mod": "Pandora Behaviour Engine",
+      "executable": "Pandora Behaviour Engine+.exe",
+      "arguments": "--tesv:\"{game.folder}\" -o \"{tool.output}\" --auto_run --auto_close",
+      "output": "Pandora Output",
+      "done": "meshes/actors/character/behaviors/0_master.hkx",
+      "files": [
+        {
+          "path": "Pandora_Engine/ActiveMods.json",
+          "content": [
+            { "code": "aabl", "active": true, "priority": 1 },
+            { "code": "aimfix", "active": true, "priority": 2 },
+            { "code": "amco", "active": true, "priority": 3 },
+            { "code": "atkcnc", "active": true, "priority": 4 },
+            { "code": "block", "active": true, "priority": 5 },
+            { "code": "colis", "active": true, "priority": 6 },
+            { "code": "colisc", "active": true, "priority": 7 },
+            { "code": "draws", "active": true, "priority": 8 },
+            { "code": "dwsph", "active": true, "priority": 9 },
+            { "code": "eaas", "active": true, "priority": 10 },
+            { "code": "evfmgo", "active": true, "priority": 11 },
+            { "code": "fvpa", "active": true, "priority": 12 },
+            { "code": "gpma", "active": true, "priority": 13 },
+            { "code": "hotkey", "active": true, "priority": 14 },
+            { "code": "hpmhr", "active": true, "priority": 15 },
+            { "code": "itmuse", "active": true, "priority": 16 },
+            { "code": "jpatka", "active": true, "priority": 17 },
+            { "code": "jpbo", "active": true, "priority": 18 },
+            { "code": "newblk", "active": true, "priority": 19 },
+            { "code": "para", "active": true, "priority": 20 },
+            { "code": "scar", "active": true, "priority": 21 },
+            { "code": "slmco", "active": true, "priority": 22 },
+            { "code": "sppffp", "active": true, "priority": 23 },
+            { "code": "sppftp", "active": true, "priority": 24 },
+            { "code": "tdmh", "active": true, "priority": 25 },
+            { "code": "tdmlen", "active": true, "priority": 26 },
+            { "code": "tdmv", "active": true, "priority": 27 },
+            { "code": "tkds", "active": true, "priority": 28 },
+            { "code": "ufpca", "active": true, "priority": 29 },
+            { "code": "xpmse", "active": true, "priority": 30 }
+          ]
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "mod": "OBody Settings",
+      "path": "SKSE/Plugins/OBody_presetDistributionConfig.json",
+      "content": {
+        "npcFormID": {},
+        "npc": {},
+        "factionFemale": {},
+        "factionMale": {},
+        "npcPluginFemale": {},
+        "npcPluginMale": {},
+        "raceFemale": {},
+        "raceMale": {},
+        "blacklistedNpcsFormID": {},
+        "blacklistedNpcs": [],
+        "blacklistedNpcsPluginFemale": [],
+        "blacklistedNpcsPluginMale": [],
+        "blacklistedRacesFemale": [
+          "ElderRace",
+          "ElderRaceVampire"
+        ],
+        "blacklistedRacesMale": [
+          "ElderRace",
+          "ElderRaceVampire"
+        ],
+        "blacklistedPresetsFromRandomDistribution": [
+          "- Zeroed Sliders -",
+          "CBBE Vanilla",
+          "CBBE Oppai",
+          "CBBE Curvy (Outfit)",
+          "CBBE Slim",
+          "CBBE Slim (Outfit)",
+          "CBBE Chubby",
+          "CBBE Fetish",
+          "CBBE Fetish v2",
+          "CBBE Petite",
+          "CBBE Strong"
+        ],
+        "blacklistedPresetsShowInOBodyMenu": true,
+        "blacklistedOutfitsFromORefitFormID": {},
+        "blacklistedOutfitsFromORefit": [],
+        "blacklistedOutfitsFromORefitPlugin": [],
+        "outfitsForceRefitFormID": {},
+        "outfitsForceRefit": []
+      }
+    }
+  ]
+}

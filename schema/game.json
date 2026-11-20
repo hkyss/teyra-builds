@@ -1,0 +1,1010 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Game",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "folder": {
+      "type": "string"
+    },
+    "stores": {
+      "type": "object",
+      "properties": {
+        "epic": {
+          "type": "string"
+        },
+        "gog": {
+          "type": "string"
+        },
+        "steam": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "order": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "format": "uint32",
+      "minimum": 0
+    },
+    "defaults": {
+      "$ref": "#/$defs/BuildDefaults",
+      "default": {}
+    },
+    "format": {
+      "const": 16
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "format",
+    "id",
+    "title",
+    "folder",
+    "stores"
+  ],
+  "$defs": {
+    "BuildDefaults": {
+      "type": "object",
+      "properties": {
+        "nexusDomain": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "systems": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/System"
+          }
+        },
+        "options": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/BuildOption"
+          }
+        },
+        "languageNames": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "game": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/GameSpec"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "editor": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Editor"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "modOrganizer": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ModOrganizer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "modArchive": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ModArchive"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "mods": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/ModSpec"
+          }
+        },
+        "patches": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/Patch"
+          }
+        },
+        "files": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/WrittenFile"
+          }
+        },
+        "downgrade": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Downgrade"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "tools": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/Tool"
+          }
+        },
+        "profiles": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/Profile"
+          }
+        },
+        "ini": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/IniSpec"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "userSettings": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/UserSetting"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "System": {
+      "type": "string",
+      "enum": [
+        "windows",
+        "linux",
+        "macos"
+      ]
+    },
+    "BuildOption": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "kind": {
+          "$ref": "#/$defs/OptionKind"
+        },
+        "values": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": []
+        },
+        "default": {
+          "type": "string",
+          "default": ""
+        },
+        "followsStore": {
+          "type": "boolean",
+          "default": false
+        },
+        "title": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "default": {}
+        },
+        "labels": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          },
+          "default": {}
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "kind"
+      ]
+    },
+    "OptionKind": {
+      "type": "string",
+      "enum": [
+        "choice",
+        "language",
+        "profile"
+      ]
+    },
+    "GameSpec": {
+      "type": "object",
+      "properties": {
+        "executable": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "stores": {
+          "type": "object",
+          "properties": {
+            "epic": {
+              "$ref": "#/$defs/StoreGame"
+            },
+            "gog": {
+              "$ref": "#/$defs/StoreGame"
+            },
+            "steam": {
+              "$ref": "#/$defs/StoreGame"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "executable",
+        "version"
+      ]
+    },
+    "StoreGame": {
+      "type": "object",
+      "properties": {
+        "executable": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "Editor": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "stores": {
+          "type": "object",
+          "properties": {
+            "epic": {
+              "type": "string"
+            },
+            "gog": {
+              "type": "string"
+            },
+            "steam": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false,
+          "default": {}
+        },
+        "executable": {
+          "type": "string"
+        },
+        "files": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": []
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "executable"
+      ]
+    },
+    "ModOrganizer": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "string"
+        },
+        "archive": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "sha256": {
+          "type": "string"
+        },
+        "gameName": {
+          "type": "string"
+        },
+        "launcher": {
+          "$ref": "#/$defs/LaunchEntry"
+        },
+        "pluginList": {
+          "$ref": "#/$defs/PluginList"
+        },
+        "profileSettings": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          }
+        },
+        "editions": {
+          "type": "object",
+          "properties": {
+            "epic": {
+              "type": "string"
+            },
+            "gog": {
+              "type": "string"
+            },
+            "steam": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false,
+          "default": {}
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "version",
+        "archive",
+        "url",
+        "sha256",
+        "gameName",
+        "launcher",
+        "pluginList"
+      ]
+    },
+    "LaunchEntry": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "executable": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "title",
+        "executable"
+      ]
+    },
+    "PluginList": {
+      "type": "string",
+      "enum": [
+        "plain",
+        "starred",
+        "none"
+      ]
+    },
+    "ModArchive": {
+      "type": "object",
+      "properties": {
+        "dataFolder": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": null
+        },
+        "rootFolders": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": []
+        },
+        "keepTopFolder": {
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "ModSpec": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "nexusId": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "format": "uint32",
+          "minimum": 0,
+          "default": null
+        },
+        "file": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": null
+        },
+        "version": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": null
+        },
+        "fileId": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "format": "uint64",
+          "minimum": 0,
+          "default": null
+        },
+        "archive": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": null
+        },
+        "folders": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": []
+        },
+        "place": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Placement"
+          },
+          "default": []
+        },
+        "target": {
+          "$ref": "#/$defs/ModTarget"
+        },
+        "expect": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": []
+        },
+        "expectGame": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": []
+        },
+        "when": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "name"
+      ]
+    },
+    "Placement": {
+      "type": "object",
+      "properties": {
+        "from": {
+          "type": "string"
+        },
+        "to": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "from",
+        "to"
+      ]
+    },
+    "ModTarget": {
+      "type": "string",
+      "enum": [
+        "mod",
+        "game",
+        "manager"
+      ]
+    },
+    "Patch": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "program": {
+          "type": "string"
+        },
+        "args": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": []
+        },
+        "done": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "when": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "program",
+        "done"
+      ]
+    },
+    "WrittenFile": {
+      "type": "object",
+      "properties": {
+        "mod": {
+          "type": "string"
+        },
+        "path": {
+          "type": "string"
+        },
+        "content": true,
+        "when": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "mod",
+        "path",
+        "content"
+      ]
+    },
+    "Downgrade": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "string"
+        },
+        "mod": {
+          "type": "string"
+        },
+        "files": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/DowngradeFile"
+          }
+        },
+        "when": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "version",
+        "mod",
+        "files"
+      ]
+    },
+    "DowngradeFile": {
+      "type": "object",
+      "properties": {
+        "file": {
+          "type": "string"
+        },
+        "patch": {
+          "type": "string"
+        },
+        "from": {
+          "type": "string"
+        },
+        "to": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "file",
+        "patch",
+        "from",
+        "to"
+      ]
+    },
+    "Tool": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "mod": {
+          "type": "string"
+        },
+        "executable": {
+          "type": "string"
+        },
+        "arguments": {
+          "type": "string",
+          "default": ""
+        },
+        "output": {
+          "type": "string"
+        },
+        "done": {
+          "type": "string"
+        },
+        "files": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ToolFile"
+          },
+          "default": []
+        },
+        "profile": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": null
+        },
+        "when": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "mod",
+        "executable",
+        "output",
+        "done"
+      ]
+    },
+    "ToolFile": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "content": true,
+        "when": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "content"
+      ]
+    },
+    "Profile": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "mods": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "plugins": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/PluginEntry"
+          },
+          "default": []
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "mods"
+      ]
+    },
+    "PluginEntry": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "$ref": "#/$defs/ConditionalPlugin"
+        }
+      ]
+    },
+    "ConditionalPlugin": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "when": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "when"
+      ]
+    },
+    "IniSpec": {
+      "type": "object",
+      "properties": {
+        "files": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/IniFile"
+          },
+          "default": []
+        },
+        "settings": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/IniSetting"
+          },
+          "default": []
+        },
+        "archiveSwap": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ArchiveSwap"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "additionalProperties": false
+    },
+    "IniFile": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "seed": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": []
+        },
+        "when": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "name"
+      ]
+    },
+    "IniSetting": {
+      "type": "object",
+      "properties": {
+        "file": {
+          "type": "string"
+        },
+        "section": {
+          "type": "string"
+        },
+        "key": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        },
+        "initialOnly": {
+          "type": "boolean",
+          "default": false
+        },
+        "when": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "file",
+        "section",
+        "key",
+        "value"
+      ]
+    },
+    "ArchiveSwap": {
+      "type": "object",
+      "properties": {
+        "file": {
+          "type": "string"
+        },
+        "section": {
+          "type": "string"
+        },
+        "key": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string"
+        },
+        "prefix": {
+          "type": "string"
+        },
+        "archive": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "file",
+        "section",
+        "key",
+        "source",
+        "prefix",
+        "archive"
+      ]
+    },
+    "UserSetting": {
+      "type": "object",
+      "properties": {
+        "folder": {
+          "$ref": "#/$defs/UserFolder"
+        },
+        "file": {
+          "type": "string"
+        },
+        "key": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        },
+        "when": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "folder",
+        "file",
+        "key",
+        "value"
+      ]
+    },
+    "UserFolder": {
+      "type": "string",
+      "enum": [
+        "localData"
+      ]
+    }
+  }
+}
